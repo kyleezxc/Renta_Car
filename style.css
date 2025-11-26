@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #D3DAD9;
+}
+/* 
+    Hover: #4A70A9(DarkBlue), #ff004f(Reddish) 
+    Text: #D3DAD9
+    Background: #37353E
+*/
+body{
+    background-color: #44444E;
+}
+
+#header {
+    background-color: rgba(55, 53, 62, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Makes sure it stays above other elements */
+}
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* Home */
+
+#home {
+    padding-top: 18%;
+    background: url('/img/background_car.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+.home-content {
+    text-align: center;
+    
+    /* padding-top: 7%; */
+}
+
+.home-content span {
+    color: #ff004f;
+}
+
+.home-content h2 {
+    font-size: 45px;
+}
+
+/* About */
+
+#about {
+    height: 100vh;
+    background: #37353E;
+}
+
+.about-title-1 {
+    text-align: center;
+    padding: 6%;
+}
+
+.about-us {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+}
+
+.break-line {
+    width: 25%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-col {
+    flex-basis: 20%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.about-title {
+    color: #ff004f;
+}
+
+.about-col h3 {
+    text-align: justify;
+}
+
+/* Contact Form */
+#contact {
+    height: 100vh;
+    margin-top: 40px;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-header {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container {
+    width: 500px;
+    background-color: #f9f9f9;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    font-size: 16px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form .message-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.contact-form .message-box {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form .send-message {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.contact-form .send-message:hover {
+    background-color: orangered;
+    cursor: pointer;
+}
