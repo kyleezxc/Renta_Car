@@ -1,16 +1,17 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: #D3DAD9;
 }
+
 /* 
     Hover: #4A70A9(DarkBlue), #ff004f(Reddish) 
     Text: #D3DAD9
     Background: #37353E
 */
-body{
+body {
     background-color: #44444E;
 }
 
@@ -20,8 +21,10 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* Makes sure it stays above other elements */
+    z-index: 100;
+    /* Makes sure it stays above other elements */
 }
+
 .container {
     padding: 10px 10%;
 }
@@ -70,9 +73,10 @@ nav ul li a:hover::after {
     background-position: center;
     height: 100vh;
 }
+
 .home-content {
     text-align: center;
-    
+
     /* padding-top: 7%; */
 }
 
@@ -126,8 +130,12 @@ nav ul li a:hover::after {
     text-align: justify;
 }
 
-/* Contact Form */
-#contact {
+/* Booking Form */
+#book {
+    height: 130vh;
+}
+
+.book-container {
     height: 100vh;
     margin-top: 40px;
     padding: 50px 20px;
@@ -137,18 +145,81 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
+.book-form-container {
+    width: 1000px;
+    margin-top: 30px;
+    height: 100vh;
+    background-color: #f9f9f9;
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-form-container label {
+    font-size: 16px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.book-form-container input,
+.book-form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+h2, option {
+    color: black;
+}
+
+.book-form-container .book-now-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ff004f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background 0.3s ease;
+} 
+
+.book-form-container .book-now-btn:hover {
+    background-color: #44444E;
+    cursor: pointer;
+}
+
+/* Contact Form */
+#contact {
+    height: 100vh;
+    margin-top: 40px;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #37353E;
+}
+
 .contact-header {
     font-size: 25px;
     margin-bottom: 10px;
     font-weight: bold;
+    color: black;
 }
 
 .form-container {
-    width: 500px;
+    width: 650px;
+    margin-top: 20px;
     background-color: #f9f9f9;
-    padding: 40px 30px;
+    padding: 30px 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form label {
@@ -156,6 +227,7 @@ nav ul li a:hover::after {
     display: block;
     text-align: left;
     margin-bottom: 5px;
+    color: black;
 }
 
 .contact-form input,
@@ -166,6 +238,7 @@ nav ul li a:hover::after {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 14px;
+    color: black;
 }
 
 .contact-form .message-box {
@@ -178,7 +251,7 @@ nav ul li a:hover::after {
     padding: 15px;
     font-size: 14px;
     font-weight: bold;
-    background-color: #ff6600;
+    background-color: #ff004f;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -186,6 +259,48 @@ nav ul li a:hover::after {
 }
 
 .contact-form .send-message:hover {
-    background-color: orangered;
+    background-color: #44444E;
     cursor: pointer;
 }
+
+/* Footer */
+
+.footer {
+    background: #222;
+    padding: 30px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-container {
+    width: 80%;
+    margin: auto;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.admin-btn {
+    font-weight: 600;
+    border-bottom: 1px dashed #ccc;
+}
+
+.admin-btn:hover {
+    color: #ff4f4f;
+    border-bottom-color: #ff4f4f;
+}
+
+
