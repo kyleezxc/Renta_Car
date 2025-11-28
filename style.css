@@ -173,7 +173,8 @@ nav ul li a:hover::after {
     font-size: 14px;
 }
 
-h2, option {
+h2,
+option {
     color: black;
 }
 
@@ -187,7 +188,7 @@ h2, option {
     border-radius: 5px;
     color: #fff;
     transition: background 0.3s ease;
-} 
+}
 
 .book-form-container .book-now-btn:hover {
     background-color: #44444E;
@@ -304,3 +305,66 @@ h2, option {
 }
 
 
+/* Login Form */
+
+#login {
+    height: 100vh;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #37353E;
+}
+
+.login-header {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.login-container {
+    width: 650px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label {
+    font-size: 16px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.login-form input,
+.login-form button{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: black;
+}
+
+.login-form .login-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ff004f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.login-form .login-btn:hover {
+    background-color: #44444E;
+    cursor: pointer;
+}
