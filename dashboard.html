@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rent-a-Car Dashboard</title>
+  <title>RentaCar Admin | Dashboard</title>
   <script>
     function handleLogout() {
       alert("You have been logged out.");
@@ -22,9 +22,9 @@
     <a href="#dashboard-content">Dashboard</a>
     <a href="#booking-section">Bookings</a>
     <a href="#customer-section">Customers</a>
-    <a href="#">Payments</a>
-    <a href="#">Reports</a>
-    <a href="#">Settings</a>
+    <a href="#payments-section">Payments</a>
+    <a href="#report-section">Reports</a>
+    <a href="#settings-section">Settings</a>
     <a href="#" class="logout" onclick="handleLogout()">Logout</a>
   </div>
 
@@ -127,8 +127,8 @@
               <td>2025-11-25</td>
               <td>2025-11-28</td>
               <td><span class="badge badge-success">Active</span></td>
-              <td>Update</td>
-              <td>Delete</td>
+              <td><a href="">Update</a></td>
+              <td><a href="">Delete</a></td>
             </tr>
             <tr>
               <td>Cris Roniel Ibali</td>
@@ -136,8 +136,8 @@
               <td>2025-11-24</td>
               <td>2025-11-26</td>
               <td><span class="badge badge-warning">Due Today</span></td>
-              <td>Update</td>
-              <td>Delete</td>
+              <td><a href="">Update</a></td>
+              <td><a href="">Delete</a></td>
             </tr>
           </tbody>
         </table>
@@ -149,6 +149,33 @@
       <nav class="navbar">
         <div class="container">
           <span class="navbar-brand">Customers</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Payment Section -->
+    <div id="payments-section">
+      <nav class="navbar">
+        <div class="container">
+          <span class="navbar-brand">Payments</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Report Section -->
+    <div id="report-section">
+      <nav class="navbar">
+        <div class="container">
+          <span class="navbar-brand">Reports</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Settings Section -->
+    <div id="settings-section">
+      <nav class="navbar">
+        <div class="container">
+          <span class="navbar-brand">Settings</span>
         </div>
       </nav>
     </div>

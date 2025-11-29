@@ -176,15 +176,7 @@ table th {
     min-height: 100vh;
 }
 
-#booking-section {
-    padding: 20px;
-    background: #eaeaea;
-    min-height: 400px;
-    margin-top: 20px;
-    height: 100vh;
-}
-
-#customer-section {
+#booking-section, #customer-section, #payments-section, #report-section, #settings-section {
     padding: 20px;
     background: #eaeaea;
     min-height: 400px;
