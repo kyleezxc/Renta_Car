@@ -1,0 +1,257 @@
+<?php
+  session_start();
+
+  if(!isset($_SESSION["admin"])){
+      header("Location: login.php");
+      exit();
+  }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentaCar Admin | Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <h4>Welcome Admin!</h4>
+    <a href="#dashboard-content">Dashboard</a>
+    <a href="#booking-section">Bookings</a>
+    <a href="#customer-section">Customers</a>
+    <a href="#payments-section">Payments</a>
+    <a href="#settings-section">Settings</a>
+    <a href="logout.php" class="logout" >Logout</a>
+  </div>
+
+  <!-- Wrap both sections in one container -->
+  <div class="main-wrapper">
+
+    <div class="dashboard-container">
+      <div id="dashboard-content">
+        <nav class="navbar">
+          <div class="container">
+            <span class="navbar-brand">Dashboard Overview</span>
+          </div>
+        </nav>
+
+        <div class="cards">
+          <div class="card card-primary">
+            <div class="card-body">
+              <h5 class="card-title">Total Bookings</h5>
+              <p class="card-text">0</p>
+            </div>
+          </div>
+          <div class="card card-success">
+            <div class="card-body">
+              <h5 class="card-title">Available Vehicles</h5>
+              <p class="card-text">0</p>
+            </div>
+          </div>
+          <div class="card card-warning">
+            <div class="card-body">
+              <h5 class="card-title">Ongoing Rentals</h5>
+              <p class="card-text">0</p>
+            </div>
+          </div>
+          <div class="card card-danger">
+            <div class="card-body">
+              <h5 class="card-title">Pending Returns</h5>
+              <p class="card-text">0</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Bookings Table -->
+        <div class="mt-4">
+          <h5>Recent Bookings</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Customer</th>
+                <th>Vehicle</th>
+                <th>Pickup Date</th>
+                <th>Return Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rendyl John</td>
+                <td>Toyota Corolla</td>
+                <td>2025-11-25</td>
+                <td>2025-11-28</td>
+                <td><span class="badge badge-success">Active</span></td>
+              </tr>
+              <tr>
+                <td>Cris Roniel Ibali</td>
+                <td>Honda Civic</td>
+                <td>2025-11-24</td>
+                <td>2025-11-26</td>
+                <td><span class="badge badge-warning">Due Today</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Section -->
+    <div id="booking-section">
+      <nav class="navbar">
+        <div class="container">
+          <span class="navbar-brand">Bookings</span>
+        </div>
+      </nav>
+      <div class="mt-4">
+        <h5>Recent Bookings</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Vehicle</th>
+              <th>Pickup Date</th>
+              <th>Return Date</th>
+              <th>Status</th>
+              <th colspan="2" style="text-align: center;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rendyl John</td>
+              <td>Toyota Corolla</td>
+              <td>2025-11-25</td>
+              <td>2025-11-28</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td><a href="">Update</a></td>
+              <td><a href="">Delete</a></td>
+            </tr>
+            <tr>
+              <td>Cris Roniel Ibali</td>
+              <td>Honda Civic</td>
+              <td>2025-11-24</td>
+              <td>2025-11-26</td>
+              <td><span class="badge badge-warning">Due Today</span></td>
+              <td><a href="">Update</a></td>
+              <td><a href="">Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Customer Section -->
+    <div id="customer-section">
+      <nav class="navbar">
+        <div class="container">
+          <span class="navbar-brand">Customers</span>
+        </div>
+      </nav>
+      <div class="mt-4">
+        <h5>Customer Manager</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Customer ID</th>
+              <th>Customer Name</th>
+              <th>Customer Email</th>
+              <th>Status</th>
+              <th colspan="2" style="text-align: center;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Rendyl John Carlos</td>
+              <td>rendyl@gmail.com</td>
+              <td><span class="badge badge-success">Active</span></td>
+              <td><a href="">Update</a></td>
+              <td><a href="">Delete</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Cris RonielIbali</td>
+              <td>crisibali@gmail.com</td>
+              <td><span class="badge badge-danger">Not Active</span></td>
+              <td><a href="">Update</a></td>
+              <td><a href="">Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Payment Section -->
+    <div id="payments-section">
+      <nav class="navbar">
+        <div class="container">
+          <span class="navbar-brand">Payments</span>
+        </div>
+      </nav>
+      <div class="mt-4">
+        <h5>Payment Information</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Payment ID</th>
+              <th>Customer Name</th>
+              <th>Payment Status</th>
+              <th colspan="2" style="text-align: center;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>123</td>
+              <td>Rendyl John Carlos</td>
+              <td><span class="badge badge-success">Paid</span></td>
+              <td><a href="">Update</a></td>
+              <td><a href="">Delete</a></td>
+            </tr>
+            <tr>
+              <td>456</td>
+              <td>Cris Roniel Ibali</td>
+              <td><span class="badge badge-danger">Not Paid</span></td>
+              <td><a href="">Update</a></td>
+              <td><a href="">Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Settings Section -->
+    <div id="settings-section">
+      <nav class="navbar">
+        <div class="container">
+          <span class="navbar-brand">Settings</span>
+        </div>
+      </nav>
+      <div class="profile-container">
+        <h3>Profile Settings</h3>
+        <form class="profile-form">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter new username">
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter new password">
+
+          <label for="password">Confirm Password</label>
+          <input type="password" id="password" placeholder="Confirm new password">
+
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+
+
+    </div>
+
+  </div>
+</body>
+
+</html>
